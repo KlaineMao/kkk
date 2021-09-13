@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/stylelg.css" />
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<title>登录</title>
+	</head>
+	<body style="height: 100vh;">
+		<div class="introduce">
+			<div class="nihao" style="position: fixed; width: 175px; height: 30px; z-index: 99; right: 0; background-color:rgba(177, 49, 51, 0.8);border-radius: 5px; text-align: center;color: #ececec;cursor: pointer;">
+				<a href="login.html" style="text-decoration: none;color: white;">你好,<span id="see"></span>!</a>
+			</div>
+			<div class="login">
+				<!-- 切换登陆方式 -->
+				<div class="choose">
+					<div onclick="showDiv1(); " id="xz1" style="border-bottom: none;">账号登录</div>
+					<div onclick="showDiv2(); " id="xz2" style="border-bottom: none;">邮箱登录</div>
+				</div>
+				<!-- 第一种登陆方式 -->
+				<div id="div1" style="display: block; border: none;">
+					<div class="row">
+						<input type="text" class="user" id="user"  placeholder="用户名" /><span id="tip1">&nbsp;</span>
+					</div>
+					
+					<div class="row">
+						<input type="password" class="password" id="password" placeholder="密码" /><span id="tip2">&nbsp;</span>
+					</div>
+					
+					<div class="loginin" id="login"><span>登&nbsp;录</span></div>
+					<div class="log"><span><a href="register.html" style="text-decoration: none; color: white;">注&nbsp;册</a></span></div>
+				</div>
+				<!-- 第二种登陆方式 -->
+				<div id="div2" style="display: none; border-bottom: none;">
+
+					<div class="row">
+						<input type="text" class="user" id="email" placeholder="邮箱" />
+						<span id="tip3"></span>
+					</div>
+					<div class="row2">
+						<div class="flex">
+							<input type="text" class="number" id="getCode" placeholder="验证码"/>
+							<div class="SC1" id="getit">点击获取</div>
+						</div>
+					</div>
+					<div class="loginin"><span>登&nbsp;录</span></div>
+					<div class="log"><span><a href="register.html" style="text-decoration: none; color: white;">注&nbsp;册</a></span></div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/indexlogin.js"></script>
+		<!-- 左侧导航 -->
+		<div class="menu">
+			<div class="navigation">
+				<ul>
+				    <li>
+				        <a href="newsHome.html">
+				            <span class="icon"><i class="fa fa-home"></i></span>
+				            <span class="title">首页</span>
+				        </a>
+				    </li>
+				    <li>
+				        <a href="person.html">
+				            <span class="icon"><i class="fa fa-user"></i></span>
+				            <span class="title">个人界面</span>
+				        </a>
+				    </li>
+				    <li>
+				        <a href="#">
+				            <span class="icon"><i class="fa fa-comment"></i></span>
+				            <span class="title">最新新闻</span>
+				        </a>
+				    </li>
+				    <li>
+				        <a href="#" id="sousuo">
+				            <span class="icon"><i class="fa fa-question-circle"></i></span>
+				            <span class="title">搜索</span>
+				        </a>
+				    </li>
+				    <li>
+				        <a href="#">
+				            <span class="icon"><i class="fa fa-cog"></i></span>
+				            <span class="title">管理文章</span>
+				        </a>
+				    </li>
+				    <li>
+				        <a href="#" id="xiu">
+				            <span class="icon"><i class="fa fa-lock"></i></span>
+				            <span class="title">修改密码</span>
+				        </a>
+				    </li>
+				    <li>
+				        <a href="#">
+				            <span class="icon"><i class="fa fa-sign-out"></i></span>
+				            <span class="title">退出登录</span>
+				        </a>
+				    </li>
+				</ul>
+			</div>
+			<div class="toggle"></div>
+		</div>
+		<script>
+			const navigation = document.querySelector('.navigation');
+			document.querySelector('.toggle').onclick = function() {
+				this.classList.toggle('active');
+				navigation.classList.toggle('active');
+			}
+		</script>
+		<div class="input" id="inpu">
+			<div class="register" style="margin-left: 40px;">
+				<img src="../img/close.png" width="30px" height="30px"  id="close" style="position: relative; margin-left: 415px; margin-top: 5px;cursor: pointer;"/>
+				<div class="row2" style="margin-left: -25px;">
+					<div class="flex" style="margin-top: 0px;">
+						<input type="text" class="number" style="margin-top: 18px; width: 250px;" id="getCode" placeholder=""/>
+						<div class="SC1" style="margin-top: 18px;" id="getit">点击搜索</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="input" id="inp"style="z-index: -1; position: fixed;">
+			<div class="login" style="height: 300px;">
+				<div class="login" style="height: 400px;">
+					<div class="flex">
+					<input class="user" id="oldpassword" placeholder="请输入改前的密码" style="width: 300px;position: relative;top: 0px;left: -80px;"/>
+					<input class="user" id="changepassword" placeholder="请输入改后的密码" style="width: 300px;position: relative;top: 60px;left: -480px;"/>
+					<div class="log" style="position: relative;top: 70px;left: -50px;" id="sureit" >确定</div>
+					<div class="log" style="position: relative;top: 70px;left: -50px;" id="canc" >取消</div>
+				</div>
+				</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/index.js"></script>
+</html>

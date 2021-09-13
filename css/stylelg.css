@@ -1,0 +1,220 @@
+.login{
+	height: 420px;
+	width: 500px;
+	background-color: rgba(255,255,255,0.9);
+	position: relative;
+	top: 20vh;
+	border-radius: 25px;
+	box-shadow: rgba(190, 190, 190, 0.5) 5px 7px;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+	overflow: hidden;
+}
+.register{
+	height: 600px;
+	width: 460px;
+	background-color: rgba(255,255,255,0.9);
+	position: relative;
+	top: 10vh;
+	border-radius: 25px;
+	box-shadow: rgba(190, 190, 190, 0.5) 5px 7px;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	overflow: hidden;
+}
+.register:hover,.selectin:hover{
+	animation-name: hoverIt;
+	animation-duration: .7s;
+	animation-fill-mode: forwards;
+}
+.register .title{
+	display: block;
+	width: 460px;
+	height: 60px;
+	font-weight: 700;
+	font-size: 30px;
+	text-align: center;
+	background-color: rgba(205, 50, 50, 0.8);
+	color: white;
+}
+.selectin .title{
+	display: block;
+	width: 300px;
+	height: 50px;
+	font-weight: 600;
+	font-size: 25px;
+	text-align: center;
+	background-color: rgba(205, 50, 50, 0.8);
+	color: white;
+}
+.login:hover{
+	animation-name: hoverIt;
+	animation-duration: .7s;
+	animation-fill-mode: forwards;
+}
+@keyframes hoverIt{
+	from{box-shadow: rgba(190, 190, 190, 0.5) 5px 7px;}
+	to{box-shadow: rgba(1,1,1,0.2) 5px 7px;}
+}
+.login .title{
+	display: block;
+	font-family: 'Songti SC','Noto Serif SC',STZhongsong,STKaiti,KaiTi,Roboto,serif;
+	font-weight: 600;
+	font-size: 30px;
+	margin-top: 10px;
+}
+.choose{
+	display: flex;
+	flex-direction: column;
+	width: 60px;
+	color: #efefef;
+}
+.choose #xz1,.choose #xz2{
+	width: 30px;
+	height: 200px;
+	text-align: center;
+	font-size: 18px;
+	padding: 15px;
+	background-color: rgba(205, 50, 50, 0.8);
+	border-radius: 0px 7px 7px 0px;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+#xz1{
+	margin-bottom: .5px ;
+}
+#xz1:hover{
+	background-color: #B73133;
+}
+#xz2:hover{
+	background-color: #B73133;
+}
+.user,.password{
+	width: 250px;
+	height: 40px;
+	margin-left: 85px;
+	border-radius: 7px;
+	outline: none;
+	border: #EFEFEF 1px solid;
+	padding-left: 10px;
+}
+.user{
+	margin-top: 60px;
+}
+.password,.number{
+	margin-top: 25px;
+}
+.all{
+	display: flex;
+	flex-direction: row;
+}
+.selectin{
+	height: 280px;
+	width: 300px;
+	background-color: rgba(255,255,255,0.9);
+	position: relative;
+	top: 32vh;
+	border-radius: 25px;
+	box-shadow: rgba(190, 190, 190, 0.5) 5px 7px;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	overflow: hidden;
+}
+.number{
+	width: 175px;
+	height: 40px;
+	border-radius: 7px;
+	outline: none;
+	border: #EFEFEF 1px solid;
+	padding-left: 10px;
+	display: inline-block;
+}
+.loginin{
+	width: 200px;
+	height: 40px;
+	margin-left: 105px;
+	margin-top: 35px;
+	text-align: center;
+	line-height: 40px;
+	background-color: rgba(205, 50, 50, 0.8);
+	color: #EFEFEF;
+	border-radius: 7px;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+.log:hover,.loginin:hover,.flex .male:hover,.flex .famale:hover{
+	background-color: #B73133;
+}
+.log{
+	width: 200px;
+	height: 40px;
+	margin-left: 105px;
+	margin-top: 20px;
+	text-align: center;
+	line-height: 40px;
+	background-color: rgba(205, 50, 50, 0.8);
+	color: #EFEFEF;
+	border-radius: 7px;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+.flex{
+	margin-left: 85px;
+	border-radius: 7px;
+	width: 250px;
+	white-space: nowrap;
+}
+.SC1{
+	width: 75px;
+	height: 40px;
+	display: inline-block;
+	font-size: 14px;
+	white-space: nowrap;
+	border: #EFEFEF 1px solid;
+	text-align: center;
+	position: relative;
+	left: -4px;
+	top: 2px;
+	border-radius: 7px;
+	line-height: 40px;
+	background-color: rgba(205, 50, 50, 0.8);
+	color: white;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.SC1:hover{
+	background-color: #B73133;
+}
+.row{
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+#tip1,#tip2,#tip3,#tip4,#arr1,#arr2,#arr3,#arr4{
+	display: block;
+	margin-left: 85px;
+	width: auto;
+	height: 15px;
+	font-size: 12px;
+	color: #B73133;
+}
+.flex .male,.flex .famale{
+	display: inline-block;
+	margin-top: 25px;
+	width: 75px;
+	height: 33px;
+	background-color: rgba(205, 50, 50, 0.8);
+	cursor: pointer;
+	color: white;
+	text-align: center;
+	border-radius: 7px;
+	position: relative;
+	left: -25px;
+	transition: all 0.3s;
+}
+.flex .male{
+	margin-right: 20px;
+}

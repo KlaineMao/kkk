@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/stylelg.css" />
+		<!-- <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script> -->
+		<title>红色中国</title>
+		<style type="text/css">
+		    body {
+		        font-size: 84%;
+		        
+		        line-height: 1.4;
+		    }
+		    
+		    a {
+		        color: rgb(219, 35, 38);
+		    }
+		    
+		    #Searchresult {
+		        width: 700px;
+		        height: 600px;
+		        padding: 20px;
+		        background: rgb(248, 248, 248);
+				}
+				.pagination a {
+				    text-decoration: none;
+				    border: 1px solid rgb(226, 64, 89);
+				    color: rgb(219, 35, 38);
+				}
+				
+				.pagination a,
+				.pagination span {
+				    display: inline-block;
+				    padding: 0.1em 0.4em;
+				    margin-right: 5px;
+				    margin-bottom: 5px;
+				}
+				
+				.pagination .current {
+				    color: rgb(219, 35, 38);
+				    border: 1px solid rgb(226, 64, 89);
+				}
+				
+				.pagination .current.prev,
+				.pagination .current.next {
+				    color: rgb(219, 35, 38);
+				    border: 1px solid rgb(226, 64, 89);
+				}
+		    }
+		</style>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.pagination.js"></script>
+		<script type="text/javascript">
+		    $(function() {
+		
+		        var initPagination = function() {
+		            var num_entries = $("#hiddenresult div.result").length;
+		            // 创建分页
+		            $("#Pagination").pagination(num_entries, {
+		                num_edge_entries: 1, //边缘页数
+		                num_display_entries: 4, //主体页数
+		                callback: pageselectCallback,
+		                items_per_page: 1 //每页显示1项
+		            });
+		        }();
+		
+		        function pageselectCallback(page_index, jq) {
+		            var new_content = $("#hiddenresult div.result:eq(" + page_index + ")").clone();
+		            $("#Searchresult").empty().append(new_content); //装载对应分页的内容
+		            return false;
+		        }
+		    });
+		</script>
+		<script type="text/javascript" src="../js/redchina.js"></script>
+	</head>
+	<body>
+		<!-- 内容 -->
+		<div class="introduce">
+			<div class="all">
+			<div class="bigpic">
+				<div style="margin-left: 50px; margin-top: 30px; width: 700px;">
+				<div id="Searchresult">分页初始化完成后这里的内容会被替换。</div>
+				<div id="hiddenresult" style="display:none;">
+				    <!-- 列表元素 -->
+				    <div class="result">第1项内容</div>
+				    <div class="result">第2项内容</div>
+				    <div class="result">第3项内容</div>
+				    <div class="result">第4项内容</div>
+				    <div class="result">第5项内容</div>
+				    <div class="result">第6项内容</div>
+				    <div class="result">第7项内容</div>
+				    <div class="result">第8项内容</div>
+				</div>
+				<div id="Pagination" class="pagination" style="position: relative; left: 230px;margin-top: 15px;">
+				    <!-- 这里显示分页 -->
+				</div>
+				</div>
+			</div>
+			<div class="tips">
+				<span style="margin-top: 26px;"><a href="#">红色中国</a></span>
+				<span style="margin-top: 5px;"><a href="study.html">学习文化</a></span>
+				<span style="margin-top: 5px;"><a href="strong.html">强军兴军</a></span>
+			</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/index.js"></script>
+		<!-- 左侧导航 -->
+		<div class="menu">
+		        <div class="navigation">
+		           <ul>
+		               <li>
+		                   <a href="newsHome.html">
+		                       <span class="icon"><i class="fa fa-home"></i></span>
+		                       <span class="title">首页</span>
+		                   </a>
+		               </li>
+		               <li>
+		                   <a href="login.html">
+		                       <span class="icon"><i class="fa fa-user"></i></span>
+		                       <span class="title">个人界面</span>
+		                   </a>
+		               </li>
+		               <li>
+		                   <a href="#">
+		                       <span class="icon"><i class="fa fa-comment"></i></span>
+		                       <span class="title">最新新闻</span>
+		                   </a>
+		               </li>
+		               <li>
+		                   <a href="#" id="sousuo">
+		                       <span class="icon"><i class="fa fa-question-circle"></i></span>
+		                       <span class="title">搜索</span>
+		                   </a>
+		               </li>
+		               <li>
+		                   <a href="#">
+		                       <span class="icon"><i class="fa fa-cog"></i></span>
+		                       <span class="title">管理文章</span>
+		                   </a>
+		               </li>
+		               <li>
+		                   <a href="#" id="xiu">
+		                       <span class="icon"><i class="fa fa-lock"></i></span>
+		                       <span class="title">修改密码</span>
+		                   </a>
+		               </li>
+		               <li>
+		                   <a href="#">
+		                       <span class="icon"><i class="fa fa-sign-out"></i></span>
+		                       <span class="title">退出登录</span>
+		                   </a>
+		               </li>
+		           </ul>
+		        </div>
+		        <div class="toggle"></div>
+		    </div>
+			<script>
+			        const navigation = document.querySelector('.navigation');
+			        document.querySelector('.toggle').onclick = function(){
+			            this.classList.toggle('active');
+			            navigation.classList.toggle('active');
+			        }
+			    </script>
+				<div class="input" id="inpu">
+					<div class="register" style="margin-left: 40px;">
+						<img src="../img/close.png" width="30px" height="30px"  id="close" style="position: relative; margin-left: 415px; margin-top: 5px;cursor: pointer;"/>
+						<div class="row2" style="margin-left: -25px;">
+							<div class="flex" style="margin-top: 0px;">
+								<input type="text" class="number" style="margin-top: 18px; width: 250px;" id="getCode" placeholder=""/>
+								<div class="SC1" style="margin-top: 18px;" id="getit">点击搜索</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="input" id="inp"style="z-index: -1; position: fixed;">
+					<div class="login" style="height: 400px;">
+						<div class="flex">
+						<input class="user" id="oldpassword" placeholder="请输入改前的密码" style="width: 300px;position: relative;top: 0px;left: -80px;"/>
+						<input class="user" id="changepassword" placeholder="请输入改后的密码" style="width: 300px;position: relative;top: 60px;left: -480px;"/>
+						<div class="log" style="position: relative;top: 70px;left: -50px;" id="sureit" >确定</div>
+						<div class="log" style="position: relative;top: 70px;left: -50px;" id="canc" >取消</div>
+					</div>
+					</div>
+				</div>
+			<script type="text/javascript" src="../js/index.js"></script>
+	</body>
+</html>

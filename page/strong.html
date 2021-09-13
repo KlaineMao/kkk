@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/stylelg.css" />
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<title>强军兴军</title>
+	</head>
+	<body>
+		<!-- 内容 -->
+		<div class="introduce">
+			<div class="all">
+			<div class="bigpic">
+				
+			</div>
+			<div class="tips">
+				<span style="margin-top: 26px;"><a href="redchina.html">红色中国</a></span>
+				<span style="margin-top: 5px;"><a href="study.html">学习文化</a></span>
+				<span style="margin-top: 5px;"><a href="#">强军兴军</a></span>
+			</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/index.js"></script>
+		<!-- 左侧导航 -->
+		<div class="menu">
+		        <div class="navigation">
+		            <ul>
+		                <li>
+		                    <a href="newsHome.html">
+		                        <span class="icon"><i class="fa fa-home"></i></span>
+		                        <span class="title">首页</span>
+		                    </a>
+		                </li>
+		                <li>
+		                    <a href="login.html">
+		                        <span class="icon"><i class="fa fa-user"></i></span>
+		                        <span class="title">个人界面</span>
+		                    </a>
+		                </li>
+		                <li>
+		                    <a href="#">
+		                        <span class="icon"><i class="fa fa-comment"></i></span>
+		                        <span class="title">最新新闻</span>
+		                    </a>
+		                </li>
+		                <li>
+		                    <a href="#" id="sousuo">
+		                        <span class="icon"><i class="fa fa-question-circle"></i></span>
+		                        <span class="title">搜索</span>
+		                    </a>
+		                </li>
+		                <li>
+		                    <a href="#">
+		                        <span class="icon"><i class="fa fa-cog"></i></span>
+		                        <span class="title">管理文章</span>
+		                    </a>
+		                </li>
+		                <li>
+		                    <a href="#" id="xiu">
+		                        <span class="icon"><i class="fa fa-lock"></i></span>
+		                        <span class="title">修改密码</span>
+		                    </a>
+		                </li>
+		                <li>
+		                    <a href="#">
+		                        <span class="icon"><i class="fa fa-sign-out"></i></span>
+		                        <span class="title">退出登录</span>
+		                    </a>
+		                </li>
+		            </ul>
+		        </div>
+		        <div class="toggle"></div>
+		    </div>
+			<script>
+			        const navigation = document.querySelector('.navigation');
+			        document.querySelector('.toggle').onclick = function(){
+			            this.classList.toggle('active');
+			            navigation.classList.toggle('active');
+			        }
+			    </script>
+				<div class="input" id="inpu">
+					<div class="register" style="margin-left: 40px;">
+						<img src="../img/close.png" width="30px" height="30px"  id="close" style="position: relative; margin-left: 415px; margin-top: 5px;cursor: pointer;"/>
+						<div class="row2" style="margin-left: -25px;">
+							<div class="flex" style="margin-top: 0px;">
+								<input type="text" class="number" style="margin-top: 18px; width: 250px;" id="getCode" placeholder=""/>
+								<div class="SC1" style="margin-top: 18px;" id="getit">点击搜索</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="input" id="inp"style="z-index: -1; position: fixed;">
+					<div class="login" style="height: 400px;">
+						<div class="flex">
+						<input class="user" id="oldpassword" placeholder="请输入改前的密码" style="width: 300px;position: relative;top: 0px;left: -80px;"/>
+						<input class="user" id="changepassword" placeholder="请输入改后的密码" style="width: 300px;position: relative;top: 60px;left: -480px;"/>
+						<div class="log" style="position: relative;top: 70px;left: -50px;" id="sureit" >确定</div>
+						<div class="log" style="position: relative;top: 70px;left: -50px;" id="canc" >取消</div>
+					</div>
+					</div>
+				</div>
+				<script type="text/javascript" src="../js/index.js"></script>
+	</body>
+</html>
